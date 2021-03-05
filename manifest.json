@@ -1,0 +1,17 @@
+{
+  "name": "Test",
+  "description": "Test",
+  "version": "1",
+  "content_scripts": [{
+    "matches":["https://e3.nfu.edu.tw/EasyE3P/LMS2/login.aspx*"],
+    "js":["main.js","js/opencv.js","js/tesseract.min.js"],
+    "run_at":"document_start",
+    "all_frame":true
+  }],
+  "permissions": ["tabs","storage"],
+  "browser_action": {
+      "name": "Click to re-recognize",
+      "default_popup":"popup.html"
+  },
+  "manifest_version": 2
+}
